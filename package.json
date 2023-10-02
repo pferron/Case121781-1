@@ -90,7 +90,7 @@
     "jwks-rsa": "^3.0.1",
     "jwt-decode": "^3.1.2",
     "lodash": "^4.17.21",
-    "p-limit": "^3.1.0",
+    "p-limit": "^4.0.0",
     "prom-client": "^14.2.0",
     "prop-types": "^15.8.1",
     "query-string": "^7.1.3",
