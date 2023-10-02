@@ -1,0 +1,114 @@
+{
+  "extends": [
+    "config:base"
+  ],
+  "commitMessagePrefix": "🔧",
+  "rangeStrategy": "bump",
+  "reviewers": [
+    "team:roots"
+  ],
+  "masterIssue": true,
+  "stabilityDays": 7,
+  "prCreation": "not-pending",
+  "prHourlyLimit": 0,
+  "rebaseWhen": "behind-base-branch",
+  "timezone": "US/Central",
+  "packageRules": [
+    {
+      "matchPackagePatterns": [
+        "*"
+      ],
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ],
+      "groupName": "all non-major dependencies",
+      "groupSlug": "all-minor-patch"
+    },
+    {
+      "packageNames": [
+        "copy-webpack-plugin"
+      ],
+      "allowedVersions": "<7"
+    },
+    {
+      "packageNames": [
+        "node"
+      ],
+      "allowedVersions": "^12.18.2"
+    },
+    {
+      "packageNames": [
+        "aws-sdk",
+        "infrastructureascode/aws-cli"
+      ],
+      "stabilityDays": 0
+    },
+    {
+      "matchPackageNames": [
+        "nginx"
+      ],
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ],
+      "groupName": "all non-major nginx updates",
+      "groupSlug": "nginx-minor-patch"
+    },
+    {
+      "matchPackageNames": [
+        "hadolint/hadolint"
+      ],
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ],
+      "groupName": "all non-major hadolint updates",
+      "groupSlug": "hadolint-minor-patch"
+    },
+    {
+      "matchPackageNames": [
+        "alpine",
+        "alpine/terragrunt",
+        "aquasec/trivy",
+        "drone/cli",
+        "plugins/ecr",
+        "infrastructureascode/aws-cli",
+        "hashicorp/terraform",
+        "docker.deere.com/isgdevops/drone-cloudformation-deploy",
+        "docker.deere.com/isgdevops/get-aws-credentials",
+        "docker.deere.com/section31/drone-blackduck-scanner",
+        "docker.deere.com/section31/drone-veracode-scanner",
+        "cloudposse/cloudwatch-logs/aws"
+      ],
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ],
+      "groupName": "all non-major drone pipeline image updates",
+      "groupSlug": "drone-pipeline-images-minor-patch"
+    },
+    {
+      "matchPackageNames": [
+        "aws"
+      ],
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ],
+      "groupName": "all non-major terraform aws provider updates",
+      "groupSlug": "tf-aws-provider-minor-patch"
+    },
+    {
+      "matchPackagePrefixes": [
+        "@deere"
+      ],
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ],
+      "groupName": "all non-major deere dependencies",
+      "groupSlug": "deere-minor-patch"
+    }
+  ]
+}
