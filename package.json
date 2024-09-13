@@ -136,7 +136,7 @@
     "@types/chai": "^4.3.5",
     "@types/dirty-chai": "^2.0.2",
     "@types/enzyme": "^3.10.13",
-    "@types/history": "^4.7.11",
+    "@types/history": "^5.0.0",
     "@types/mocha": "^10.0.1",
     "@types/sinon": "^10.0.16",
     "@types/sinon-chai": "^3.2.9",
